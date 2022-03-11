@@ -18,7 +18,16 @@ def left():
     wrap.sprite.set_reverse_x(mario,True)
     wrap.sprite.move(mario, -10, 0)
 
+@wrap.on_key_always(wrap.K_UP)
+def up():
+    wrap.sprite.set_costume(mario,"swim3")
+    wrap.sprite.set_reverse_y(mario,False)
+    wrap.sprite.move(mario, 0, -10)
 
+@wrap.on_key_always(wrap.K_DOWN)
+def down():
+    wrap.sprite.set_reverse_y(mario,True)
+    wrap.sprite.move(mario, 0, 10)
 
 
 
